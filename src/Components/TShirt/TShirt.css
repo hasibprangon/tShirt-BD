@@ -1,0 +1,9 @@
+.tShirt{
+    border: 1px solid aqua;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.tShirt img{
+    height: 250px;
+}
