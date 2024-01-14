@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Cart = ({cart, handleRemoveFromCart}) => {
+const Cart = ({ cart, handleRemoveFromCart }) => {
     let message;
-    if(cart.length === 0){
+    if (cart.length === 0) {
         message = <p>Please add atleast one product</p>
     }
-    else{
+    else {
         message = <div>
             <h3>Thanks</h3>
             <p>For buy something from us</p>
@@ -18,10 +18,13 @@ const Cart = ({cart, handleRemoveFromCart}) => {
             {message}
             {
                 cart.map(tShirt => <p
-                key={tShirt._id}
+                    key={tShirt._id}
                 >{tShirt.name}
-                <button onClick={() => handleRemoveFromCart (tShirt._id)}>Delete</button>
+                    <button onClick={() => handleRemoveFromCart(tShirt._id)}>Delete</button>
                 </p>)
+            }
+            {
+                cart.length === 4 && <small>thanks for supporting us</small>
             }
         </div>
     );
@@ -33,4 +36,5 @@ export default Cart;
 SYSTEM OF CONDITIONAL RENDERIGN
 S1:use if else to set a variable that will contain an element, components or anything
 S2:ternary:  condition ? 'for true' : 'false'
+S3: logical &&: (if the condition is true then the next thing will be displayed)
 */
