@@ -14,6 +14,7 @@ const Cart = ({cart, handleRemoveFromCart}) => {
     return (
         <div>
             <h2>Order Summary: {cart.length}</h2>
+            {cart.length > 2 ? <span>I think you want to buy more</span> : <span>If you don't have money than what should I do?</span>}
             {message}
             {
                 cart.map(tShirt => <p
@@ -31,4 +32,5 @@ export default Cart;
 /*
 SYSTEM OF CONDITIONAL RENDERIGN
 S1:use if else to set a variable that will contain an element, components or anything
+S2:ternary:  condition ? 'for true' : 'false'
 */
