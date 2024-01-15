@@ -26,6 +26,9 @@ const Cart = ({ cart, handleRemoveFromCart }) => {
             {
                 cart.length === 4 && <small>thanks for supporting us</small>
             }
+            {
+                cart.length > 3 || <h3>you should add more than 3 items</h3>
+            }
         </div>
     );
 };
@@ -37,4 +40,5 @@ SYSTEM OF CONDITIONAL RENDERIGN
 S1:use if else to set a variable that will contain an element, components or anything
 S2:ternary:  condition ? 'for true' : 'false'
 S3: logical &&: (if the condition is true then the next thing will be displayed)
+S4: logical ||(OR): (if the condition is true then the next thing will be displayed)
 */
